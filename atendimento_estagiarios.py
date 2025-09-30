@@ -2,7 +2,6 @@ import os
 import streamlit as st
 import torch
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, Settings
-# Altere esta linha para importar o Groq em vez do Gemini
 from llama_index.llms.groq import Groq
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 
@@ -27,7 +26,6 @@ def carregar_css(caminho_arquivo):
 carregar_css("style.css")
 
 with st.sidebar:
-    # Use 'width' no lugar de 'use_container_width' para evitar o aviso de depreciação
     st.image("instituto_fundao_joo_goulart_fjg_logo.jfif", width='stretch')
 
     st.title("Atendimento a Novos Estagiários")
@@ -43,7 +41,6 @@ st.title("Chatbot de Suporte para Novos Estagiários")
 DIRETORIO_DOCUMENTOS = "Documentos_FJG"
 
 try:
-    # Altere a chave de API para GROQ
     api_key = st.secrets["GROQ_API_KEY"]
 except (KeyError, FileNotFoundError):
     st.error("Chave de API do Groq não configurada.")
