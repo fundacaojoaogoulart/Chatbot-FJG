@@ -38,7 +38,7 @@ with st.sidebar:
 
 st.title("Chatbot de Suporte para Novos Estagiários")
 
-DIRETORIO_DOCUMENTOS = "Documentos_FJG"
+DIRETORIO_DOCUMENTOS = "documentos_FJG"
 
 try:
     api_key = st.secrets["GROQ_API_KEY"]
